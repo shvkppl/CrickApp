@@ -1,0 +1,48 @@
+version: '3.4'
+
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+     - 3306:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+            
+  cricauth_service:
+    image: shivkumarpippal/cricauthimg
+    ports:
+     - 9096:9096
+    depends_on:
+      - mysql
+    restart: always
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+
+      
+  cricfav_service:
+    image: shivkumarpippal/cricfavimg
+    depends_on:
+      - mongo
+    restart: always
+    ports:
+      - 8081:8081
+      
+  crictrend_service:
+    image: shivkumarpippal/crictrendimg
+    depends_on:
+      - mongo
+    restart: always
+    ports:
+      - 9062:9062
+
+  cricapp_spa:
+    image: shivkumarpippal/cric_angular
+    restart: always
+    ports:
+      - 8080:8080
+
+

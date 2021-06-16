@@ -1,0 +1,36 @@
+mat-card{
+    margin:10px;
+    /* margin-left; */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 250px;
+    height: 100px;
+}
+mat-label{
+    display: inherit;
+}
+mat-card-header.mat-card-header{
+    height:30px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    font-size: large;
+    text-align: right;
+    font-weight: 600;
+}
+
+div{
+    position: absolute;
+    right: 15px;
+}
+
+mat-card-content{
+    font-size: medium;
+    display: flex;
+    /* margin-bottom: 10px; */
+    position: absolute;
+    bottom: 16px;
+    right:16px;
+    left:16px;
+}

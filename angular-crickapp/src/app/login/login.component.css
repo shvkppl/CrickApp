@@ -1,0 +1,41 @@
+section{
+  min-height: 528px;
+  display: flex;
+  justify-content: center;
+  background-image: url(../../assets/images/multi-color-cropped.jpg);
+align-items: center;
+}
+
+
+mat-card {
+  /* padding-top: 100px; */
+  width: 400px;
+  /* height: 200px; */
+  /* margin: 2em auto; */
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+mat-form-field {
+  display: block;
+}
+
+/* .log img{
+  height: 600px;
+  width: 100%;
+  object-position: center ;
+  object-fit: cover;
+} */
+
+.logcon{
+  display: flex;
+  /* position: absolute; */
+  /* top:50%;
+  left:40%; */
+  /* width: 400px; */
+  /* transform: translate(-50%,-40%); */
+}
+
+.error-message{
+  color: darkred;
+}

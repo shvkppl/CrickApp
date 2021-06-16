@@ -1,0 +1,149 @@
+mat-card{
+    margin:10px;
+    /* margin-left; */
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 190px;
+}
+/* mat-label{
+    display: inherit;
+} */
+/* mat-card-content{
+    
+} */
+.fav{
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+
+}
+.date{
+    font-weight: 500;
+    font-size: medium;
+}
+
+.favbtn{
+    /* position: absolute; */
+    top: -10px;
+    right: -8px;
+    /* text-align: right; */
+}
+
+/* mat-icon{
+    position: absolute;
+    top: 0px;
+    right: 0px; 
+} */
+mat-card-title{
+    /* margin-bottom: 2px; */
+    padding-right: 20px;
+    text-align: center;
+}
+.cardheader{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 110px;
+}
+
+/* .btncontainer{
+    display: flex;
+    justify-content: center;
+} */
+.scorebtn{
+    /* ; */
+    width: 100px;
+   
+    text-align: center;
+   
+}
+.team{
+    font-size: medium;
+    padding-right: 0px;
+    /* padding-bottom: 2px; */
+}
+
+.vs{
+    font-size: small;
+    padding-right: 0px;
+}
+
+/* .bottom{
+    bottom: 15px;
+    justify-content: space-between;   
+} */
+
+.buttonnlabel{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.started{
+    /* border-radius: 1px; */
+    width: 100px;
+    color: green;
+    border: 1px solid green;
+    font-weight: 400;
+    font-size: small;
+    padding: 7px;
+    text-align: center;
+  border-radius: 5px;
+    padding-top:7px;
+    padding-bottom: 0px;
+    /* margin-bottom:10px; */
+}
+
+.notstarted{
+    /* border-radius: 1px; */
+    width: 100px;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    font-weight: 400;
+    font-size: small;
+    padding: 7px;
+    text-align: center;
+  border-radius: 5px;
+    padding-top:7px;
+    padding-bottom: 0px;
+    /* margin-bottom:10px; */
+}
+
+mat-card-title.mat-card-title{
+    margin: 0px 0px 0px;
+}
+
+mat-card-content.mat-card-content{
+    display: inline-flex;
+
+    justify-content: center;
+    /* margin-top: 5px; */
+    margin-bottom: 10px;
+    /* width: fit-content; */
+    flex-basis: auto;
+/* padding: 10px; */
+    /* height:15px;
+    margin: 0px 0px 10px; */
+}
+
+.trophy{
+    padding: 2px;
+}
+
+mat-label{
+    padding:2px;
+margin-top:-2px;
+    font-size: small;
+    font-weight: 500;
+}
+
+.tobedeclared{
+    color: grey;
+}
+
+.likes{
+    position: absolute;
+    top: 15px;
+    right: 40px;
+}

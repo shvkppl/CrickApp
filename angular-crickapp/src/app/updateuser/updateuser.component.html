@@ -1,0 +1,96 @@
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+
+            <div>
+                <h2>Update Profile</h2>
+            </div>
+            <form #updateForm="ngForm" (ngSubmit)="OnSubmit()">
+
+                <label class="error-message">{{ submitmessage }}</label>
+                <mat-form-field class="full-width-input">
+                    <!-- <input class="validate" type="text" name="username" matInput [formControl]=" username"
+                        placeholder="Enter username" placeholder="Enter username" required> -->
+
+                    <input #name="ngModel" [(ngModel)]="user.username" class="validate" type="text" name="username"
+                        matInput placeholder="Enter Name" required>
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                    <!-- <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+  
+              <div *ngIf="username.errors.required">
+                Name is required.
+              </div>
+            </div> -->
+
+                </mat-form-field>
+
+
+                <mat-form-field class="full-width-input">
+                    <!-- <input class="validate" type="password" name="password" matInput [formControl]=" password"
+                        placeholder="Enter password" required minlength="6"> -->
+
+                    <input #pwd="ngModel" [(ngModel)]="user.password" class="validate" type="password" name="password"
+                        matInput placeholder="Enter password" required minlength="6">
+                    <mat-icon matSuffix>vpn_key</mat-icon>
+                    <!-- <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+  
+              <div *ngIf="password.errors.required">
+                password cannot be null
+              </div>
+            </div> -->
+                </mat-form-field>
+
+
+
+
+                <!-- <mat-form-field class="full-width-input">
+                    <input class="validate" type="email" name="mailid" matInput [formControl]=" mailid"
+                        [pattern]="emailPattern" placeholder="Enter email" required>
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field> -->
+
+
+
+
+                <mat-form-field class="full-width-input">
+                    <input #phone="ngModel" [(ngModel)]="user.phoneno" class="validate" type="tel" name="phoneno"
+                        pattern="[789][0-9]{9}" matInput placeholder="Enter mobile no." required>
+                    <mat-icon matSuffix> call</mat-icon>
+                    <!-- <div *ngIf="phoneno.invalid && (phoneno.dirty || phoneno.touched)" class="alert alert-danger">
+  
+              <div *ngIf="phoneno.errors.required">
+                phoneno cannot be null
+              </div>
+            </div> -->
+                </mat-form-field>
+
+
+                <mat-form-field class="full-width-input">
+                    <input #country="ngModel" [(ngModel)]="user.country" type="text" name="country" matInput
+                        placeholder="Enter country">
+                    <mat-icon matSuffix> location_on</mat-icon>
+                    <!-- <div *ngIf="country.invalid && (country.dirty || country.touched)" class="alert alert-danger">
+  
+              <div *ngIf="country.errors.required">
+                country cannot be null
+              </div>
+            </div> -->
+                </mat-form-field>
+
+
+
+
+                <!-- <button mat-button style="background-color:rgb(19, 0, 128); color:white" class="btn-large btn-submit"
+                    type="submit" (click)="OnSubmit( );">Submit</button> -->
+
+                <button mat-raised-button color="primary" class="btn-large btn-submit" type="submit"
+                    [disabled]="!updateForm.form.valid">Update</button>
+
+
+                <!-- <button mat-stroked-button (click)="openSnackBar(message, action)">Show snack-bar</button> -->
+            </form>
+            <!-- <p>Already have an account ? <a routerLink="/login">Login here</a></p> -->
+        </mat-card-content>
+    </mat-card>
+
+</div>

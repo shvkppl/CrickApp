@@ -1,0 +1,49 @@
+.matchContainer{
+    /* padding-top: 80px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../../assets/images/multi-color-cropped.jpg);
+    background-size: contain;
+    padding-top: 50px;
+}
+
+
+.header{
+    flex: 0 0 90%;
+    /* width: 250px; */
+    /* height: 190px; */
+    height: 20px;
+    /* margin: 10px; */
+    /* margin-bottom: 0px; */
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+/* align-items: flex-start; */
+    padding: 50px 0px 20px 0px;
+    /* width: 80%; */
+    /* right: 20px 0px 10px -20px; */
+/* margin:30px; */
+    /* align-self: flex-start; */
+}
+
+
+h1{
+margin-bottom: 0px;
+    font-size: xx-large;
+    /* padding-left:80px; */
+}
+
+
+.paginatorcntr{
+    flex: 0 0 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+ul.ngx-pagination{
+    padding: 0px 0px 0px 0px;
+}

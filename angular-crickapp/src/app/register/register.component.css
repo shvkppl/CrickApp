@@ -1,0 +1,44 @@
+mat-card {
+  
+    width: 400px;
+    height: 380px;
+    /* margin: 3em auto; */
+    /* padding-top: 100px; */
+    text-align: center;
+    color: rgb(61, 82, 177);
+    
+  }
+  
+  mat-form-field {
+    display: block;
+    text-align: center;
+  }
+
+  mat-card-content{
+    text-align: center;
+    
+  }
+
+  .container{
+    padding-top: 50px;
+    min-height: 528px;
+    display: flex;
+    justify-content: center;
+    background-image: url(../../assets/images/multi-color-cropped.jpg);
+    backdrop-filter: blur(8px);
+  align-items: center;
+  }
+ 
+
+  
+  mat-form-field {
+    display: block;
+    text-align: center;
+  }
+
+  mat-card-content{
+    text-align: center;
+    
+  }
+
+ 

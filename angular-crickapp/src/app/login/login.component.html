@@ -1,0 +1,31 @@
+<section class="log">
+  <!-- <img src="../../assets/images/sports_grass_field_04.jpg"> -->
+
+  <!-- <div class="logcon"> -->
+  <mat-card>
+
+    <mat-card-content>
+      <h1> Login Form</h1>
+      <form name="user">
+
+        <label class="error-message">{{ submitmessage }}</label>
+        <mat-form-field class="full-width-input">
+          <input type=text name="txtname" matInput [formControl]="mailid" placeholder="Enter mailid" required>
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <small> {{checkUsermail()}} </small>
+        <mat-form-field class="full-width-input">
+          <input type=password name="txtpass" matInput [formControl]="password" placeholder="Enter password" required
+            minlength="3">
+          <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
+
+        <button mat-button style="background-color:blue; color:white" (click)="loginData()" colour="primary"> Login
+        </button>
+
+      </form>
+      <p>New User? <a routerLink="/register">Sign Up</a></p>
+    </mat-card-content>
+  </mat-card>
+  <!-- </div> -->
+</section>

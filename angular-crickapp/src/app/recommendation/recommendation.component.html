@@ -1,0 +1,19 @@
+<div class="matchContainer">
+
+    <h1 class="header">Trending</h1>
+
+
+    <app-trending [match]="matchcntr.match" [counter]="matchcntr.counter"
+        *ngFor="let matchcntr of matchdata | paginate: {itemsPerPage: 10, currentPage: q}">
+
+    </app-trending>
+
+
+    <div class="paginator">
+        <div>
+            <pagination-controls (pageChange)="q = $event"></pagination-controls>
+        </div>
+
+    </div>
+
+</div>

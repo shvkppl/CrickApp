@@ -1,0 +1,23 @@
+<div class="matchContainer">
+    <!-- Include the notes collection with each note rendered as a separate NoteComponent -->
+    <!-- <app-upcomingMatch class="cols-md-5" [upcomingMatch]="upcomingMatch" *ngFor="let upcomingMatch of upcomingMatches">
+
+    </app-upcomingMatch> -->
+
+    <h1 class="header">Favorites</h1>
+
+    <app-match [match]="match" *ngFor="let match of matches | paginate: {itemsPerPage: 10, currentPage: q}">
+
+    </app-match>
+
+    <!-- <div *ngIf="!favPresent" class="nofav">
+        No Favorites to show.
+    </div> -->
+
+    <div class="paginator">
+        <div>
+            <pagination-controls (pageChange)="q = $event"></pagination-controls>
+        </div>
+
+    </div>
+</div>

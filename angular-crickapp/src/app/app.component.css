@@ -1,0 +1,44 @@
+.navbar{
+    justify-content: space-between;
+}
+
+/* span{
+   
+    
+} */
+/* div.brand{
+    height: 20px;
+    display: block;
+}
+span.brand{
+
+    display: inline-block;
+    height: 20px;
+    padding-bottom: 10px;
+} */
+.brand{
+    display: inline-block;
+    /* padding-top: 2rem; */
+}
+
+/* .brand1{
+    padding-bottom: -2px;
+    flex-wrap: wrap;    
+    height: 10px;
+}*/
+.text{
+    padding-right: 2rem;
+    font-size: 15px;
+}
+
+.row{
+    flex-flow: end;
+    padding-right: 2rem;
+} 
+/* .icons{
+    padding-bottom: -10px;
+} */
+
+.push {
+    height: 50px;
+  }

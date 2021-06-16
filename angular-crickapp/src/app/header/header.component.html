@@ -1,0 +1,122 @@
+<!-- <mat-toolbar color="primary" class="navbar">
+
+    <div class="row brand">
+        <span>CricApp</span>
+    </div>
+   
+
+
+
+    <div class="row">
+
+        <span class="text">
+            <a mat-button routerLink="home" class="links">
+                <mat-icon class="icons">home</mat-icon> Home
+            </a>
+
+        </span>
+        <span class="text">
+            <a mat-button routerLink="matches" class="links">
+                <mat-icon class="icons">sports_cricket</mat-icon> Matches
+            </a>
+        </span>
+        <span class="text">
+            <a mat-button routerLink="favorites" class="links">
+                <mat-icon class="icons">favorite</mat-icon> Favorites
+            </a>
+        </span>
+        <span class="text">
+            <a mat-button routerLink="trending" class="links">
+                <mat-icon class="icons">trending_up</mat-icon> Trending
+
+            </a>
+
+        </span>
+
+    </div>
+
+    <div class="row" *ngIf="loggedIn; else notLoggedIn">
+
+        <span class="text">
+            <a mat-button (click)="logout()" class="links">
+                <mat-icon class="icons">manage_accounts</mat-icon> Manage
+            </a>
+
+        </span>
+
+
+        <span>
+            <a mat-button (click)="logout()" class="links"> Logout
+                <mat-icon class="icons">logout</mat-icon>
+            </a>
+
+        </span>
+
+    </div>
+
+    <ng-template #notLoggedIn>
+        <div class="row">
+
+
+            <span>
+                <a mat-button routerLink="login" class="links">Login
+                    <mat-icon class="icons">login</mat-icon>
+                </a>
+
+            </span>
+
+        </div>
+    </ng-template>
+
+</mat-toolbar> -->
+
+
+<header class="header">
+    <a href="" class="logo">CricApp</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <!-- <img class="logo_img" src="../../assets/images/logo.png" height="40px" /> -->
+    <ul class="menu">
+        <li>
+            <a mat-button routerLink="home" class="links">
+                <mat-icon class="icons">home</mat-icon> Home
+            </a>
+        </li>
+        <li>
+            <a mat-button routerLink="matches" class="links">
+                <mat-icon class="icons">sports_cricket</mat-icon> Matches
+            </a>
+        </li>
+        <li>
+            <a mat-button routerLink="favorites" class="links">
+                <mat-icon class="icons">favorite</mat-icon> Favorites
+            </a>
+        </li>
+        <li><a mat-button routerLink="trending" class="links">
+                <mat-icon class="icons">trending_up</mat-icon> Trending
+
+            </a></li>
+
+        <li *ngIf="!loggedIn">
+            <a mat-button routerLink="login" class="links">
+                <mat-icon class="icons">login</mat-icon> Login
+
+            </a>
+
+        </li>
+
+        <li *ngIf="loggedIn"><a mat-button routerLink="updateprofile" class="links">
+                <mat-icon class="icons">manage_accounts</mat-icon> Manage
+
+            </a></li>
+
+
+        <li *ngIf="loggedIn">
+            <a mat-button (click)="logout()" class="links">
+                <mat-icon class="icons">logout</mat-icon> Logout
+
+            </a>
+
+        </li>
+    </ul>
+</header>

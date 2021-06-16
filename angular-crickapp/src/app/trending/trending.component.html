@@ -1,0 +1,57 @@
+<mat-card>
+    <div class="fav">
+        <mat-label class="date">{{match.date.split("T")[0]}}</mat-label>
+
+        <div class="likefav">
+
+            <mat-label class="likes">{{counter}} likes</mat-label>
+            <button mat-icon-button class="favbtn" color="warn" (click)="toggleFav()">
+                <mat-icon *ngIf="match.favorited; else notfavorited">favorite</mat-icon>
+                <ng-template #notfavorited>
+                    <mat-icon>favorite_border</mat-icon>
+                </ng-template>
+            </button>
+
+
+        </div>
+
+    </div>
+    <mat-card-header class="cardheader">
+        <mat-card-title class="team">{{match.team_1}}</mat-card-title>
+        <mat-card-title class="vs">vs</mat-card-title>
+        <mat-card-title class="team">{{match.team_2}}</mat-card-title>
+    </mat-card-header>
+
+
+    <!-- <div class="btncontainer"> -->
+    <mat-card-content>
+
+        <div><img class="trophy" src="../../assets/images/trophy.png" height="15px" /></div>
+        <mat-label *ngIf="match.winner_team!==''; else tobedeclared" class="declared">
+            {{match.winner_team}}
+        </mat-label>
+        <ng-template #tobedeclared>
+            <mat-label class="tobedeclared">TBD</mat-label>
+        </ng-template>
+    </mat-card-content>
+    <div class="buttonnlabel">
+        <mat-label [ngClass]="(match.matchStarted) ? 'started':'notstarted'">
+            <!-- [ngClass]="(step=='step1')?'my-class1':'my-class2'" -->
+            <span *ngIf="match.matchStarted; else elseBlock">STARTED</span>
+            <ng-template #elseBlock>NOT STARTED
+            </ng-template>
+            <!-- {{match.matchStarted}} -->
+
+        </mat-label>
+
+        <button mat-raised-button color="primary" class="scorebtn" (click)="getScore()"
+            [disabled]="!match.matchStarted">SCORE</button>
+    </div>
+
+
+    <!-- <p>{{}}</p> -->
+    <!-- </mat-card-content> -->
+
+    <!-- </div> -->
+
+</mat-card>
